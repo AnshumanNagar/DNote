@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Dnote</title>
+        <link rel="icon" href="Dnote Logo.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link href="//db.onlinewebfonts.com/c/1c6b6cddab6609324d9016562358e0cd?family=Biome" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body onload="loadNotes(); favLoadNotes()">
+        <div id="topbar">
+            <div id="section_Btns">
+                <button id="allNotes_Btn" onclick="allNote_Clicked()"><i class="bi-stack"></i> All</button>
+                <button id="favNotes_Btn" onclick="favNote_Clicked()"><i class="bi-heart-fill"></i> Favourite</button>
+            </div>
+            <button id="addNote_Btn" data-toggle="modal" data-target="#addModal"><i class="bi-plus"></i></button>
+        </div>
+
+        <div id="addModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><b>Add Note</b></h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <input id="noteTitle_Input" placeholder="Title" class="form-control">
+                        <br>
+                        <textarea id="noteContent_Input" class="form-control" placeholder="Your Note" data-enable-grammarly="false"></textarea>
+                        <h4 id="modal_Msg">Please fill all the fields!</h4>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button id="add_Btn" class="btn btn-primary" data-dismiss="modal" onclick="add_Clicked()">Add</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="all_Screen">
+            <h4 id="info_Line">Added notes will be displayed here.</h4>        
+        </div>
+
+        <div id="fav_Screen">
+            <h4 id="info_Line2">Favourites will be added here.</h4>
+        </div>
+    </body>
+</html> 
